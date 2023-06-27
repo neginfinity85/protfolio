@@ -1,0 +1,26 @@
+// main: ../style.less
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../fonts/fa-brands-400.woff2') format('woff2');
+}
+
+.social {
+  margin-bottom: 42px;
+}
+
+.social__link {
+  margin-right: 10px;
+  text-decoration: none;
+
+  & svg {
+    transition: transform 0.2s linear;
+  }
+
+  & svg:hover {
+    transform: translateY(-5px);
+  }
+}
