@@ -4,7 +4,9 @@
   display: flex;
   padding-top: 100px;
   padding-bottom: 120px;
+  position: relative;
 
+  background: url('../img/symbols.png') right bottom no-repeat;
   border-bottom: 1px solid fade(@grey, 30%);
 }
 
@@ -34,5 +36,8 @@
 }
 
 .intro__photo {
-  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
 }
