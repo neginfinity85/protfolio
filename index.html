@@ -15,7 +15,7 @@
     <title>Portfolio</title>
 </head>
 
-<body class="no-scroll">
+<body>
 
     <!-- Header -->
     <header class="header">
@@ -601,7 +601,7 @@
     </div><!-- ./modal -->
 
     <!-- Modals view Resume -->
-    <div class="modal">
+    <div class="modal" style="display: none;">
         <div class="modal__dialog">
 
             <button class="modal__close" type="button">
@@ -609,7 +609,7 @@
             </button>
 
             <div class="modal__content">
-                <h3 class="modal__title">Resume</h3>
+                <h3 class="modal__title text-center">Resume</h3>
 
                 <div class="text-center">
                     <a class="btn btn--thin" href="#">download pdf</a>
@@ -763,6 +763,61 @@
                 </div>
 
             </div><!-- ./modal__content -->
+
+        </div><!-- ./modal__dialog -->
+    </div><!-- ./modal -->
+
+    <!-- Modals contact view -->
+    <div class="modal" style="display: none;">
+        <div class="modal__dialog modal__dialog--small">
+
+            <button class="modal__close" type="button">
+                <img src="img/modal-close.svg" width="34" height="34" alt="Close">
+            </button>
+
+
+            <div class="contact">
+
+                <div class="contact__left">
+                    <h3 class="modal__title mb-0">LET'S TALK!</h3>
+                    <div class="modal__subtitle">CALL ME OR SEND ME A REQUEST</div>
+
+                    <ul class="contact__info">
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="img/phone.svg" height="17" alt="">
+                            (200) 100 3000
+                        </li>
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="img/message.svg" height="17" alt="">
+                            designer@ui43.com
+                        </li>
+                    </ul>
+
+                    <form class="form" action="/" method="post">
+                        <div class="form__group">
+                            <label class="form__label" for="input-email">Adress e-mail</label>
+                            <input class="form__input" name="input-email" type="text" id="input-email"
+                                placeholder="Adress e-mail">
+                        </div>
+                        <div class="form__group">
+                            <label class="form__label" for="input-text">Request</label>
+                            <textarea class="form__textarea" name="input-text" id="input-text"
+                                placeholder="Type your request..."></textarea>
+                        </div>
+
+                        <div class="text-right">
+                            <button class="btn" type="submit">SEND</button>
+                        </div>
+
+                    </form>
+
+                </div><!-- ./contact__left -->
+
+                <div class="contact__right"></div>
+
+
+
+            </div><!-- ./contact -->
 
         </div><!-- ./modal__dialog -->
     </div><!-- ./modal -->
