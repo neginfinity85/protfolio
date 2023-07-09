@@ -1,5 +1,8 @@
 $(function () {
-  /* filter work category */
+  const worksSlider = $('[data-slider="slick"]');
+
+  /* filter work category 
+  ==========================================*/
   let filter = $('[data-filter]');
 
   filter.on('click', function (event) {
@@ -20,7 +23,8 @@ $(function () {
       });
     }
   });
-  /* Modal window show&hide */
+  /* Modal window show&hide 
+  =========================================*/
 
   const modalCall = $('[data-modal]');
   const modalClose = $('[data-close]');
@@ -36,7 +40,7 @@ $(function () {
     setTimeout(function () {
       $(modalId).find('.modal__dialog').css({ transform: 'rotateX(0)' });
     }, 200);
-    $('[data-slider="slick"]').slick('setPosition'); // slick-slider update position
+    worksSlider.slick('setPosition'); // slick-slider update position
   });
 
   modalClose.on('click', function (event) {
@@ -66,8 +70,11 @@ $(function () {
     event.stopPropagation();
   });
 
-  /*Slider https://kenwheeler.github.io/slick/ */
-  $('[data-slider="slick"]').slick({
+  /*Slider 
+  ===============================================
+  https://kenwheeler.github.io/slick/ 
+  ==============================================*/
+  worksSlider.slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
