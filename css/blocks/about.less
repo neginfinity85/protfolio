@@ -2,10 +2,15 @@
 
 .about {
   margin: 8.4rem 0;
+
+  @media @tablet {
+    margin: 4rem 0;
+  }
 }
 
 .about__inner {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1090px;
 }
@@ -13,13 +18,18 @@
 .about__photo,
 .about__content {
   width: 50%;
+
+  @media @tablet {
+    width: 100%;
+  }
 }
 
 .about__photo {
   position: relative;
 
   img {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     z-index: 2;
   }
 
@@ -34,11 +44,38 @@
     bottom: 0;
     z-index: 1;
   }
+
+  @media @tablet {
+    order: 2;
+
+    &::before {
+      width: 100%;
+      height: 300px;
+
+      left: 0;
+    }
+
+    img {
+      position: relative;
+      margin: 0 auto;
+    }
+  }
 }
 
 .about__content {
   margin-top: 2.6rem;
   padding-left: 0.5rem;
+
+  @media @tablet {
+    order: 1;
+    margin-bottom: 2rem;
+    padding-left: 0;
+
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .about__title {
@@ -46,6 +83,14 @@
   color: @black;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media @notebook {
+    font-size: 2.5rem;
+  }
+
+  @media @mobile {
+    font-size: 2rem;
+  }
 }
 
 .about__bigtitle {
@@ -58,6 +103,18 @@
   font-weight: 700;
   color: fade(@black, 15%);
   text-transform: uppercase;
+
+  @media @notebook {
+    font-size: 4rem;
+  }
+
+  @media @tablet {
+    position: static;
+  }
+
+  @media @mobile {
+    font-size: 3rem;
+  }
 }
 
 .about__text {

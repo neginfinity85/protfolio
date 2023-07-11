@@ -1,23 +1,52 @@
 // main: ../style.less
 
+.intro {
+  @media @mobile {
+    margin-top: 100px;
+  }
+}
+
 .intro__inner {
   display: flex;
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 6.6rem;
+  padding-bottom: 8rem;
   position: relative;
 
   background: url('../img/symbols.png') right bottom no-repeat;
   border-bottom: 1px solid fade(@gray, 30%);
+
+  @media @tablet {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    background-size: 360px auto;
+  }
+
+  @media @mobile {
+    background-size: 300px auto;
+  }
 }
 
 .intro__content {
   width: 50%;
+
+  @media @mobile {
+    width: 60%;
+  }
+
+  @media @mobile-small {
+    width: 100%;
+  }
 }
 
 .intro__suptitle {
   font-size: 2.13rem;
   color: @black;
   font-weight: 200;
+
+  @media @tablet {
+    font-size: 1.5rem;
+  }
 }
 
 .intro__title {
@@ -26,6 +55,10 @@
   font-size: 3rem;
   color: @black;
   font-weight: 700;
+
+  @media @tablet {
+    font-size: 2rem;
+  }
 }
 
 .intro__text {
@@ -40,4 +73,16 @@
   bottom: 0;
   right: 0;
   z-index: 1;
+
+  @media @tablet {
+    width: 350px;
+  }
+
+  @media @mobile {
+    width: 300px;
+  }
+
+  @media @mobile-small {
+    display: none;
+  }
 }
