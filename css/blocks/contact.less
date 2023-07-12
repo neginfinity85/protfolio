@@ -7,12 +7,20 @@
 .contact__left {
   width: 47%;
   padding: 2rem;
+
+  @media @mobile {
+    width: 100%;
+  }
 }
 
 .contact__right {
   width: 53%;
 
   background: @black url(https://placehold.co/480x700) no-repeat center;
+
+  @media @mobile {
+    display: none;
+  }
 }
 
 .contact__info {

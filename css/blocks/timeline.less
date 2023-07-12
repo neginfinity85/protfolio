@@ -2,6 +2,7 @@
 
 .timeline {
   display: flex;
+  flex-wrap: wrap;
   margin: 4.2rem auto;
   width: 100%;
   max-width: 768px;
@@ -20,6 +21,15 @@
     left: 50%;
     z-index: 1;
   }
+
+  @media @mobile {
+    max-width: 360px;
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .timeline__col {
@@ -32,6 +42,13 @@
 
   &--right {
     padding-left: 3.2rem;
+  }
+
+  @media @mobile {
+    width: 100%;
+
+    text-align: center;
+    padding: 0 0;
   }
 }
 
@@ -49,6 +66,10 @@
 
   &:last-child {
     margin-bottom: 0;
+
+    @media @mobile {
+      margin-bottom: 2.6rem;
+    }
   }
 }
 

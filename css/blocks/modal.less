@@ -33,6 +33,10 @@
   &--small {
     max-width: 900px;
   }
+
+  @media @tablet {
+    max-width: 790px;
+  }
 }
 
 .modal__close {
@@ -67,9 +71,17 @@
   text-transform: uppercase;
   color: @black;
   font-weight: 700;
+
+  @media @mobile-small {
+    font-size: 2rem;
+  }
 }
 
 .modal__subtitle {
   text-transform: uppercase;
   font-size: 1.06rem;
+
+  @media @mobile-small {
+    font-size: 0.7rem;
+  }
 }

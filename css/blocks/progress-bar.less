@@ -13,6 +13,7 @@
 .progress-bar__title {
   font-size: 0.93rem;
   font-weight: 300;
+  text-align: left;
 }
 
 .progress-bar__left {
@@ -24,10 +25,14 @@
 }
 
 .progress-bar__bar {
-  width: 139px;
+  min-width: 139px;
   height: 6px;
 
   background-color: #efefef;
+
+  @media @mobile-small {
+    min-width: 100px;
+  }
 }
 
 .progress-bar__progress {
