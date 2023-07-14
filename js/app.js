@@ -31,6 +31,9 @@ $(function () {
 
   modalCall.on('click', function (event) {
     event.preventDefault();
+
+    $('#nav').removeClass('show'); // Close burger menu
+
     let $this = $(this);
     let modalId = $this.data('modal');
 
@@ -104,5 +107,24 @@ $(function () {
     event.preventDefault();
 
     nav.toggleClass('show');
+  });
+
+  /* Smooth scroll
+  =============================================== */
+  $('[data-scroll]').on('click', function (event) {
+    event.preventDefault();
+
+    let blockId = $(this).data('scroll');
+
+    let blockOffset = $(blockId).offset().top - 110;
+
+    $('html, body').animate(
+      {
+        scrollTop: blockOffset,
+      },
+      700,
+    );
+
+    $('#nav').removeClass('show');
   });
 });
