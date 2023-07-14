@@ -1,5 +1,26 @@
 $(function () {
   const worksSlider = $('[data-slider="slick"]');
+  let introH = $('#intro').innerHeight();
+  let header = $('#header');
+  let scrollOffset = $(window).scrollTop();
+
+  /* Fixed Header show 
+  =============================================*/
+  checkScroll(scrollOffset);
+
+  $(window).on('scroll', function () {
+    scrollOffset = $(this).scrollTop();
+
+    checkScroll(scrollOffset);
+  });
+
+  function checkScroll(scrollOffset) {
+    if (scrollOffset >= introH) {
+      header.addClass('header--fixed');
+    } else {
+      header.removeClass('header--fixed');
+    }
+  }
 
   /* filter work category 
   ==========================================*/
