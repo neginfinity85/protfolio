@@ -15,7 +15,7 @@ $(function () {
   });
 
   function checkScroll(scrollOffset) {
-    if (scrollOffset >= introH) {
+    if (scrollOffset >= introH - 130) {
       header.addClass('header--fixed');
     } else {
       header.removeClass('header--fixed');
@@ -137,7 +137,7 @@ $(function () {
 
     let blockId = $(this).data('scroll');
 
-    let blockOffset = $(blockId).offset().top - 110;
+    let blockOffset = $(blockId).offset().top - 140;
 
     $('html, body').animate(
       {
